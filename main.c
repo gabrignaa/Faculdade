@@ -131,6 +131,7 @@ int main(){
     }
     else{
         printf("\nVoto nulo!");
+        votoNulo = votoNulo +1;
     }
 
     printf("\n(2º voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
@@ -166,6 +167,7 @@ int main(){
     }
     else{
         printf("\nVoto nulo!");
+        votoNulo = votoNulo +1;
     }
 
         printf("\n(3º voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
@@ -201,6 +203,7 @@ int main(){
     }
     else{
         printf("\nVoto nulo!");
+        votoNulo = votoNulo +1;
     }
 
 
@@ -309,7 +312,7 @@ int main(){
                     if(votoNulo > votoEduardo){
                         if(votoNulo > votoFabi){
                             if(votoNulo > votoGabi){
-                               printf("Ninguém ganhou, votonulo!"); 
+                               printf("\nNinguém ganhou, votaram nulos!"); 
                             }
                         }
                     }
