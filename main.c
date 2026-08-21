@@ -95,6 +95,7 @@ int main(){
     int votoEduardo = 0;
     int votoFabi = 0;
     int votoGabi = 0;
+    int votoNulo = 0;
 
 
     printf("(1º voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
@@ -300,9 +301,23 @@ int main(){
             }
         }
     }
-    else{
-        printf("As eleições empataram!");
+
+    if(votoNulo > votoAna){
+        if(votoNulo > votoBob){
+            if(votoNulo > votoCarla){
+                if(votoNulo > votoDouglas){
+                    if(votoNulo > votoEduardo){
+                        if(votoNulo > votoFabi){
+                            if(votoNulo > votoGabi){
+                               printf("Ninguém ganhou, votonulo!"); 
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
+
 
     printf("\nAna = %d\n", votoAna);
     printf("Bob = %d\n", votoBob);
@@ -311,6 +326,7 @@ int main(){
     printf("Eduardo = %d\n", votoEduardo);
     printf("Fabi = %d\n", votoFabi);
     printf("Gabi = %d\n", votoGabi);
+    printf("nulo = %d\n", votoNulo);
 
 
 
