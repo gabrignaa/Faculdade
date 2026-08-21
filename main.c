@@ -312,7 +312,7 @@ int main(){
                     if(votoNulo > votoEduardo){
                         if(votoNulo > votoFabi){
                             if(votoNulo > votoGabi){
-                               printf("\nNinguém ganhou, votaram nulos!"); 
+                               printf("\nNinguém ganhou, a maioria votou nulo!"); 
                             }
                         }
                     }
