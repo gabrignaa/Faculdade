@@ -98,35 +98,35 @@ int main(){
     int votoNulo = 0;
 
 
-    printf("(1º voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
+    printf("(1 voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
     scanf("%d", &voto);
 
     if(voto == 1){
-        printf("\nO candidato escolhido é a Ana\n");
+        printf("\nO candidato escolhido e a Ana\n");
         votoAna = votoAna + 1;
     }
     else if(voto == 2){
-        printf("\nO candidato escolhido é a Bob\n");
+        printf("\nO candidato escolhido e a Bob\n");
         votoBob = votoBob + 1;
     }
     else if(voto == 3){
-        printf("\nO candidato escolhido é a Carla\n");
+        printf("\nO candidato escolhido e a Carla\n");
         votoCarla = votoCarla +1;
     }
     else if(voto == 4){
-        printf("\nO candidato escolhido é a Douglas\n");
+        printf("\nO candidato escolhido e a Douglas\n");
         votoDouglas = votoDouglas + 1;
     }
     else if(voto == 5){
-        printf("\nO candidato escolhido é a Eduardo\n");
+        printf("\nO candidato escolhido e a Eduardo\n");
         votoEduardo = votoEduardo +1;
     }
     else if(voto == 6){
-        printf("\nO candidato escolhido é a Fabi\n");
+        printf("\nO candidato escolhido e a Fabi\n");
         votoFabi = votoFabi + 1;
     }
     else if(voto == 7){
-        printf("\nO candidato escolhido é a Gabi\n");
+        printf("\nO candidato escolhido e a Gabi\n");
         votoGabi = votoGabi + 1;
     }
     else{
@@ -134,35 +134,35 @@ int main(){
         votoNulo = votoNulo +1;
     }
 
-    printf("\n(2º voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
+    printf("\n(2 voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
     scanf("%d", &voto2);
 
     if(voto2 == 1){
-        printf("\nO candidato escolhido é a Ana\n");
+        printf("\nO candidato escolhido e a Ana\n");
         votoAna = votoAna + 1;
     }
     else if(voto2 == 2){
-        printf("\nO candidato escolhido é a Bob\n");
+        printf("\nO candidato escolhido e a Bob\n");
         votoBob = votoBob + 1;
     }
     else if(voto2 == 3){
-        printf("\nO candidato escolhido é a Carla\n");
+        printf("\nO candidato escolhido e a Carla\n");
         votoCarla = votoCarla +1;
     }
     else if(voto2 == 4){
-        printf("\nO candidato escolhido é a Douglas\n");
+        printf("\nO candidato escolhido e a Douglas\n");
         votoDouglas = votoDouglas + 1;
     }
     else if(voto2 == 5){
-        printf("\nO candidato escolhido é a Eduardo\n");
+        printf("\nO candidato escolhido e a Eduardo\n");
         votoEduardo = votoEduardo +1;
     }
     else if(voto2 == 6){
-        printf("\nO candidato escolhido é a Fabi\n");
+        printf("\nO candidato escolhido e a Fabi\n");
         votoFabi = votoFabi + 1;
     }
     else if(voto2 == 7){
-        printf("\nO candidato escolhido é a Gabi\n");
+        printf("\nO candidato escolhido e a Gabi\n");
         votoGabi = votoGabi + 1;
     }
     else{
@@ -170,35 +170,35 @@ int main(){
         votoNulo = votoNulo +1;
     }
 
-        printf("\n(3º voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
+        printf("\n(3 voto) Escolha em quem votar:\n1- Ana\n2- Bob\n3- Carla\n4- Douglas\n5- Eduardo\n6- Fabi\n7- Gabi\nDigite seu voto: ");
     scanf("%d", &voto3);
 
     if(voto3 == 1){
-        printf("\nO candidato escolhido é a Ana\n");
+        printf("\nO candidato escolhido e a Ana\n");
         votoAna = votoAna + 1;
     }
     else if(voto3 == 2){
-        printf("\nO candidato escolhido é a Bob\n");
+        printf("\nO candidato escolhido e a Bob\n");
         votoBob = votoBob + 1;
     }
     else if(voto3 == 3){
-        printf("\nO candidato escolhido é a Carla\n");
+        printf("\nO candidato escolhido e a Carla\n");
         votoCarla = votoCarla +1;
     }
     else if(voto3 == 4){
-        printf("\nO candidato escolhido é a Douglas\n");
+        printf("\nO candidato escolhido e a Douglas\n");
         votoDouglas = votoDouglas + 1;
     }
     else if(voto3 == 5){
-        printf("\nO candidato escolhido é a Eduardo\n");
+        printf("\nO candidato escolhido e a Eduardo\n");
         votoEduardo = votoEduardo +1;
     }
     else if(voto3 == 6){
-        printf("\nO candidato escolhido é a Fabi\n");
+        printf("\nO candidato escolhido e a Fabi\n");
         votoFabi = votoFabi + 1;
     }
     else if(voto3 == 7){
-        printf("\nO candidato escolhido é a Gabi\n");
+        printf("\nO candidato escolhido e a Gabi\n");
         votoGabi = votoGabi + 1;
     }
     else{
@@ -213,7 +213,7 @@ int main(){
                 if(votoAna > votoEduardo){
                     if(votoAna > votoFabi){
                         if(votoAna > votoGabi){
-                            printf("A Ana vencou a eleição.");
+                            printf("A Ana vencou a eleicao.");
                         }
                     }
                 }
@@ -227,7 +227,7 @@ int main(){
                 if(votoBob > votoEduardo){
                     if(votoBob > votoFabi){
                         if(votoBob > votoGabi){
-                            printf("O Bob vencou a eleição.");
+                            printf("O Bob vencou a eleicao.");
                         }
                     }
                 }
@@ -241,7 +241,7 @@ int main(){
                 if(votoCarla > votoEduardo){
                     if(votoCarla > votoFabi){
                         if(votoCarla > votoGabi){
-                            printf("A Carla vencou a eleição.");
+                            printf("A Carla vencou a eleicao.");
                         }
                     }
                 }
@@ -255,7 +255,7 @@ int main(){
                 if(votoDouglas > votoEduardo){
                     if(votoDouglas > votoFabi){
                         if(votoDouglas > votoGabi){
-                            printf("O Douglas vencou a eleição.");
+                            printf("O Douglas vencou a eleicao.");
                         }
                     }
                 }
@@ -269,7 +269,7 @@ int main(){
                 if(votoEduardo > votoDouglas){
                     if(votoEduardo > votoFabi){
                         if(votoEduardo > votoGabi){
-                            printf("O Eduardo vencou a eleição.");
+                            printf("O Eduardo vencou a eleicao.");
                         }
                     }
                 }
@@ -283,7 +283,7 @@ int main(){
                 if(votoFabi > votoDouglas){
                     if(votoFabi > votoEduardo){
                         if(votoFabi > votoGabi){
-                            printf("A Fabi vencou a eleição.");
+                            printf("A Fabi vencou a eleicao.");
                         }
                     }
                 }
@@ -297,7 +297,7 @@ int main(){
                 if(votoGabi > votoDouglas){
                     if(votoGabi > votoEduardo){
                         if(votoGabi > votoFabi){
-                            printf("A Gabi vencou a eleição.");
+                            printf("A Gabi vencou a eleicao.");
                         }
                     }
                 }
@@ -312,7 +312,7 @@ int main(){
                     if(votoNulo > votoEduardo){
                         if(votoNulo > votoFabi){
                             if(votoNulo > votoGabi){
-                               printf("\nNinguém ganhou, a maioria votou nulo!"); 
+                               printf("\nNinguem ganhou, a maioria votou nulo!"); 
                             }
                         }
                     }
@@ -333,7 +333,7 @@ int main(){
 
 
 
-    printf("\nFim da votação");
+    printf("\nFim da votacao");
 
     return 0;
 
