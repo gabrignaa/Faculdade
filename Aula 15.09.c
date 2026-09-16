@@ -1,9 +1,10 @@
+#include <stdio.h>
+#include <math.h>
+
+
 /*Exemplo do Fe*/
 
 /*
-
-#include <stdio.h>
-
 int main(){
     int numeros[5];
     int cont1;
@@ -16,11 +17,8 @@ int main(){
 
     return 0;
 }
-
 */
 
-#include <stdio.h>
-#include <math.h>>
 
 /*
 Elabore um programa que capture o RGM do Aluno, suas notas A1 e A2, calcule
@@ -39,45 +37,82 @@ SEQUENCIAR:
 - Capturar A2;
 - Calcular a media;
 - Mostrar todas as informações aluno por aluno.
+
+V1 = Mostrar se o aluno passou ou reprovou de ano após a divulgação das notas.
+V2 = Permitir que o professor escolha a quantidade de alunos da turma.
+V3 = Imperdir com um laço que o programa siga quando o usuário digitar uma nota 1 e 2 inválida.
+V4 = Crie um mecanismo que permita capturar a nota da avaliação substutiva e calcular a media final.
 */
 
+
+
+
+
 int main(){
-    float notas[5][3];
-    int rgm[5];
     int numAluno = 1;
+    int numAluno2 = 1;
     int cont = 0;
     int aluno = 0;
+    int QtdAlunos = 0;
+
+
+    printf("BEM VINDO AO SISTEMA DE NOTAS\n");
+
+    //CAPTURA E GUARDA A QUANTIDADE DE ALINOS DA SALA DIGITADA PELO USUAIRO
+    printf("Digite a quantidade de alunos da sala: ");
+    scanf("%d", &QtdAlunos);
+
+    //CRIAS OS VETORES/MATRIZ COM A QTD DE ALUNOS
+    float notas[QtdAlunos][3];
+    int rgm[QtdAlunos];
 
     //PARA CAPTURAR O RGM E NOTAS A1 E A2 DOS ALUNOS
-    printf("BEM VINDO AO SISTEMA DE NOTAS\n");
-    printf("BEM VINDO AO SISTEMA DE NOTAS\n");
-    for(cont=0; cont < 5; cont++){
-        printf("Digite o RGM do %do do aluno: ", numAluno); //vai de 1 ate a 5
-        scanf("%d", &rgm[cont]); //vai de 0 ate a 4
+    for(cont=0; cont < QtdAlunos; cont++){
+        printf("Digite o RGM do %do do aluno: ", numAluno); //vai de 1 ate a qtd de alunos
+        scanf("%d", &rgm[cont]); //vai de 0 ate a qtd de alunos
 
-        printf("Digite a nota 1 do %do do aluno: ", numAluno); //vai de 1 ate a 5
-        scanf("%f", &notas[cont][1]); //vai de 0 ate a 4
+        notas[cont][1] = -1;
+        notas[cont][2] = -1;
 
-        printf("Digite a nota 2 do %do do aluno: ", numAluno); //vai de 1 ate a 5
-        scanf("%f", &notas[cont][2]); //vai de 0 ate a 4
+        while(notas[cont][1] < 0){
+            printf("Digite a nota 1 do %do aluno: ", numAluno);
+            scanf("%f", &notas[cont][1]);
+        }
+
+        while(notas[cont][2] < 0){
+            printf("Digite a nota 2 do %do aluno: ", numAluno);
+            scanf("%f", &notas[cont][2]);
+        }
 
         numAluno += 1;
     }
 
     //PASSA POR TODOS OS ALUNOS CALCULANDO A MEDIA = A1 + A2
-    for(aluno=0; aluno < 5; aluno++){
+    for(aluno=0; aluno < QtdAlunos; aluno++){
         notas[aluno][0] = notas[aluno][1] + notas[aluno][2];
     }
 
     //MOSTRAR TODAS AS NOTAS ALUNO POR ALUNO
-    for(aluno=0; aluno < 5; aluno++){
+    for(aluno=0; aluno < QtdAlunos; aluno++){
         printf("Notas do Aluno RGM %d\n", rgm[aluno]);
         printf("==================\n");
         printf("Nota A1: %0.1f\n", notas[aluno][1]);
         printf("Nota A2: %0.1f\n", notas[aluno][2]);
-        printf("Media do aluno: %0.1f\n\n", notas[aluno][0]);
+        printf("Media do aluno: %0.1f\n\n\n", notas[aluno][0]);
+    }
+
+    //MOSTRA OS ALUNOS QUE FORAM APROVADOS OU REPROVADOS
+    for(aluno=0; aluno < QtdAlunos; aluno++){
+        if(notas[aluno][0] >= 12){
+            printf("O aluno %d foi aprovado!\n", numAluno2);
+        }
+        else{
+            printf("O aluno %d foi reprovado!\n", numAluno2);
+        }
+        numAluno2 += 1;
     }
 
 
     return 0;
 }
+
