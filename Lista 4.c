@@ -213,5 +213,61 @@ positivos. Ou seja, o programa deve parar quando o usuário fornecer um valor ne
     printf("A media dos numeros e: %.1f\n", media10);
     printf("Total de valores lidos: %d\n", conta10 - 1);
 
-    printf("\nFim do programa!\n"); 
+    printf("\nFim do programa!\n");
+
+
+/*k) Construir um programa que apresente como resultado a fatorial dos valores ímpares situados na faixa
+numérica de 1 até 10.*/
+
+    int numero5 = 1;
+    int contador5;
+    int fatorial5;
+
+    do {
+
+        if (numero5 % 2 != 0) {
+
+            fatorial5 = 1;
+            contador5 = numero5;
+
+            do {
+                fatorial5 = fatorial5 * contador5;
+                contador5 -= 1;
+            } while (contador5 >= 1);
+
+            printf("%d! = %d\n", numero5, fatorial5);
+        }
+
+        numero5 += 1;
+
+    } while (numero5 <= 10);
+
+
+/*) Elaborar um programa que apresente os resultados da soma e da média aritmética dos valores pares
+situados na faixa numérica de 50 até 70*/
+
+
+    int FaixaNumerica = 50;
+    int soma11 = 0;
+    float media11 = 0;
+    int cont11 = 0;
+
+    do{
+        if(FaixaNumerica % 2 == 0){
+            soma11 = soma11 + FaixaNumerica;
+            
+            cont11 += 1;
+        }
+
+        FaixaNumerica += 1;
+
+    } while(FaixaNumerica <= 70);
+
+    media11 = (float)soma11 / cont11;
+
+    printf("A soma dos valores pares sao %d, e a media aritmetica e %.2f.", soma11, media11);
+
+    
+
+    return 0;
 }
