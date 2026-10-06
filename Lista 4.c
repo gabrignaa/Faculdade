@@ -243,7 +243,7 @@ numérica de 1 até 10.*/
     } while (numero5 <= 10);
 
 
-/*) Elaborar um programa que apresente os resultados da soma e da média aritmética dos valores pares
+/*J) Elaborar um programa que apresente os resultados da soma e da média aritmética dos valores pares
 situados na faixa numérica de 50 até 70*/
 
 
