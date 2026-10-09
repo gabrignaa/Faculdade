@@ -41,12 +41,13 @@ int main() {
 //V2. INFORME SE O NOME DA PESSOA POSSUI A VOGAL 'A' - FEITO
 //V3. CONTE QUANTAS VOGAIS 'A' O NOME DA PESSOA POSSUI - FEITO
 //V4. CONTE QUANTAS VOGAIS (QUALQUER UMA DELAS) O NOME POSSUI - FEITO
-//V5. MOSTRE O NOME DA PESSOA AO CONTRÁRIO. - 
-//V6. CRIE UM VETOR NOME2 E COPIE O NOME CAPTURADO PARA ESTE VETOR.
+//V5. MOSTRE O NOME DA PESSOA AO CONTRÁRIO. - FEITO
+//V6. CRIE UM VETOR NOME2 E COPIE O NOME CAPTURADO PARA ESTE VETOR. - FEITO
 //V7. CRIE OS VETORES PRIMEIRONOME E SOBRENOME. JOGUE AS PARTES DOS NOMES PARA OS RESPECTIVOS VETORES.
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main() {
     system("clear");
@@ -56,13 +57,20 @@ int main() {
     int j;
     int encontrou = 0;
     int cont = 0;
+    int tamanho = 0;
     char vogais[] = "aeiouAEIOU";
+    char nome2[30];
 
     printf("Digite seu nome: ");
     gets(nome);
 
+    strcpy(nome2, nome);
+
+    
+    tamanho = strlen(nome) - 1;
+
     printf("Ola %s! Seja bem-vindo ao programa!", nome);
-    for (i = 0; i < nome[i]; i++) {
+    for (i = tamanho; i >= 0; i--) {
         printf("\n%c", nome[i]);
     }
 
@@ -81,6 +89,8 @@ int main() {
     else {
         printf("\nSeu nome não tem a vogal");
     }
+
+    printf("\nNome copiado: %s", nome2);
 
     return 0;
 }
