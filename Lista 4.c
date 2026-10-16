@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /*USANDO FOR*/
 
@@ -267,7 +268,107 @@ situados na faixa numérica de 50 até 70*/
 
     printf("A soma dos valores pares sao %d, e a media aritmetica e %.2f.", soma11, media11);
 
-    
+
+/*m) Escrever um programa que possibilite calcular a área total em metros de uma residência com os cômodos
+sala, cozinha, banheiro, dois quartos, área de serviço, quintal, garagem, entre outros que podem ser
+fornecidos ao programa. O programa deve solicitar a entrada do nome, da largura e do comprimento de um
+determinado cômodo. Em seguida, deve apresentar a área do cômodo lido e também uma mensagem
+solicitando ao usuário a confirmação de continuar calculando novos cômodos. Caso o usuário responda
+"NÃO", o programa deve apresentar o valor total acumulado da área residencial*/
+
+
+    char nome[50], resposta[10];
+    float largura, comprimento, area, total = 0;
+
+    do {
+        printf("\nDigite o nome do comodo: ");
+        gets(nome);
+
+        printf("Digite a largura do comodo: ");
+        scanf("%f", &largura);
+
+        printf("Digite o comprimento do comodo: ");
+        scanf("%f", &comprimento);
+
+        area = largura * comprimento;
+        total = total + area;
+
+        printf("Area do comodo %s: %.2f m2\n", nome, area);
+
+        printf("Deseja continuar? (SIM/NAO): ");
+
+        scanf("%s", resposta);
+        gets(nome);
+
+    } while (strcmp(resposta, "NAO") != 0 &&
+             strcmp(resposta, "nao") != 0);
+
+    printf("\nArea total da residencia: %.2f m2\n", total);
+
+
+/*n) Elaborar um programa que leia valores positivos inteiros até que um valor negativo seja informado. Ao final
+devem ser apresentados o maior e o menor valores informados pelo usuário*/
+
+
+    int numero10, maior10, menor10;
+
+    printf("Digite um numero inteiro positivo (negativo para parar): ");
+    scanf("%d", &numero10);
+
+    if (numero10 < 0) {
+        printf("Nenhum valor positivo foi informado.\n");
+        return 0;
+    }
+
+    maior10 = numero10;
+    menor10 = numero10;
+
+    while (numero10 >= 0) {
+
+        printf("\nDigite um numero inteiro positivo (negativo para parar): ");
+        scanf("%d", &numero10);
+
+        if (numero10 >= 0) {
+            if (numero10 > maior10) {
+                maior10 = numero10;
+            }
+
+            if (numero10 < menor10) {
+                menor10 = numero10;
+            }
+        }
+    }
+
+    printf("\nMaior valor informado: %d\n", maior10);
+    printf("Menor valor informado: %d\n", menor10);
+
+
+/*o) Elaborar um programa que apresente o resultado inteiro da divisão de dois números quaisquer,
+representando o dividendo e o divisor da divisão a ser processada. Para a elaboração do programa, não
+utilize o operador aritmético de divisão com quociente inteiro DIV. Use uma solução baseada em laço de
+repetição. O programa deve apresentar como resultado (quociente) quantas vezes o divisor cabe no
+dividendo.*/
+
+
+    int dividendo, divisor, quociente = 0;
+
+    printf("\nDigite o dividendo: ");
+    scanf("%d", &dividendo);
+
+    printf("Digite o divisor: ");
+    scanf("%d", &divisor);
+
+    if (dividendo < 0 || divisor <= 0) {
+        printf("Digite um dividendo positivo ou zero e um divisor positivo.\n");
+        return 0;
+    }
+
+    while (dividendo >= divisor) {
+        dividendo = dividendo - divisor;
+        quociente = quociente + 1;
+    }
+
+    printf("Quociente inteiro: %d\n", quociente);
 
     return 0;
 }
